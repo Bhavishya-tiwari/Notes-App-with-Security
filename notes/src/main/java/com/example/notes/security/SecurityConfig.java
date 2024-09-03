@@ -15,6 +15,7 @@ public class SecurityConfig {
 
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
+        System.out.println("Custom Security running");
         http.authorizeHttpRequests((requests) ->
                 requests
                         .requestMatchers("/contact").permitAll()

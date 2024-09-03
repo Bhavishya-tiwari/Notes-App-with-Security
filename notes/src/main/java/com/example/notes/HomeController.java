@@ -8,6 +8,12 @@ public class HomeController {
 
     @GetMapping("/hello")
     String home(){
+
         return "Hello";
+    }
+
+    @GetMapping("/contact")
+    String sayContact(){
+        return "Contact";
     }
 }
