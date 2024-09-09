@@ -3,6 +3,7 @@ package com.example.notes.controller;
 import com.example.notes.model.Note;
 import com.example.notes.service.NotesService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.*;
