@@ -17,13 +17,9 @@ public class SecurityConfig {
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         System.out.println("Custom Security running");
         http.authorizeHttpRequests((requests) ->
-                requests
-                        .requestMatchers("/contact").permitAll()
-                        .anyRequest().authenticated());
-
-        http.formLogin(withDefaults());
-        http.sessionManagement(session ->
-                session.sessionCreationPolicy(SessionCreationPolicy.STATELESS));
+                requests.anyRequest().authenticated());
+        http.csrf(csrf -> csrf.disable());
+//        http.formLogin(withDefaults());
         http.httpBasic(withDefaults());
         return http.build();
     }
